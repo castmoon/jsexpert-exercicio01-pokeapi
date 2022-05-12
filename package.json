@@ -4,7 +4,9 @@
   "description": "An API that gives you a random pokemon starter team",
   "main": "src/api.js",
   "scripts": {
-    "start": "node src/api.js"
+    "start": "node src/api.js",
+    "test:dev": "npx mocha -w -timeout 20000 **/**/*.test.js",
+    "test:cov": "npx nyc npx mocha --exit --parallel **/**/*.test.js"
   },
   "keywords": [
     "Tests",
@@ -18,5 +20,12 @@
     "unit"
   ],
   "author": "Wellington S. Almeida (WellsSA)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "sinon": "^14.0.0",
+    "supertest": "^6.2.3"
+  }
 }
